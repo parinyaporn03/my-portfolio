@@ -7,7 +7,7 @@ type NavbarProps = {
 const Navbar = ({ onClick }: NavbarProps) => {
   return (
     <div
-      className="flex gap-2  p-4 justify-end fixed top-0 w-full left-0 z-50"
+      className=" flex gap-2  p-4 justify-end fixed top-0  right-0 z-50"
       onClick={onClick}
     >
       {navbar_list.map((page, index) => (

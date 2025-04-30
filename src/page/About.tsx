@@ -1,20 +1,7 @@
-import { Steps } from "antd";
+import { Steps, Tooltip } from "antd";
 import { useRef } from "react";
-import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiReactrouter, SiRedux } from "react-icons/si";
-import { RiNextjsLine } from "react-icons/ri";
-import { AiFillApi } from "react-icons/ai";
 import { motion, useInView } from "motion/react";
-
-const skills = [
-  <FaReact />,
-  <SiReactrouter />,
-  <SiRedux />,
-  <RiNextjsLine />,
-  <AiFillApi />,
-  <FaHtml5 />,
-  <FaCss3Alt />,
-];
+import { skills } from "../data/MyWork";
 
 const About = () => {
   const head_ref = useRef(null);
@@ -70,18 +57,18 @@ const About = () => {
               items={[
                 {
                   title: "Frontend Developer Cooperative Education",
-                  description: "November 2024 - March 2025",
+                  description: "November 2024 - March 2025 (4 Months)",
                   status: "finish",
                 },
                 {
                   title:
                     "Teaching Assistant — User Experience Design & Data Structures Courses",
-                  description: "June - October  2024",
+                  description: "June - October 2024 (4 Months)",
                   status: "finish",
                 },
                 {
                   title: "Frontend Developer Internship ",
-                  description: "April - May 2024",
+                  description: "April - May 2024 (2 Months)",
                   status: "finish",
                 },
               ]}
@@ -94,7 +81,7 @@ const About = () => {
 
           <div
             ref={skill_ref}
-            className="bg-[#D9D9D9] rounded-full px-4 p-2 flex gap-4 text-5xl"
+            className="bg-[#D9D9D9] rounded-full px-4 p-2 flex items-center gap-4 text-5xl"
           >
             {skills.map((item, index) => (
               <motion.div
@@ -106,7 +93,9 @@ const About = () => {
                   delay: 0.5 + index * 0.07,
                 }}
               >
-                {item}
+                <Tooltip placement="bottom" title={item.iconName}>
+                  <div className="cursor-pointer">{item.element}</div>
+                </Tooltip>
               </motion.div>
             ))}
           </div>

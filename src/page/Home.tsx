@@ -17,15 +17,15 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Navbar onClick={handleClick} />
 
       {/* Content */}
       <section id="Home">
-        <div className="h-screen  p-9 flex items-center overflow-hidden">
-          <div className="flex w-full  items-center justify-between px-12">
+        <div className="h-screen p-9 flex items-center ">
+          <div className=" flex w-full  items-center justify-between px-12">
             <motion.div
-              className=" flex justify-center "
+              className="flex justify-center "
               initial={{ opacity: 0, x: -48 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
@@ -46,6 +46,8 @@ const Home = () => {
                 </div>
               </div>
             </motion.div>
+
+            {/* Avatar */}
             <motion.div
               className="rounded-4xl border-2 border-solid border-black px-10 pt-10"
               initial={{ opacity: 0, x: 38 }}
@@ -69,7 +71,7 @@ const Home = () => {
       <section id="Contact">
         <Contact />
       </section>
-    </>
+    </div>
   );
 };
 
