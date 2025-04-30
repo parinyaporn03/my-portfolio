@@ -13,9 +13,9 @@ const Works = () => {
   const is_mini_project_inview = useInView(mini_project_ref, { once: false });
 
   return (
-    <div className=" p-9  mt-[50px]" ref={head_ref}>
+    <div className=" p-9 mt-[50px]" ref={head_ref}>
       <div className="flex items-center ">
-        <div className="text-6xl font-bold text-center  flex-1/2 ">
+        <div className="max-sm:text-4xl sm:text-5xl md:text-6xl font-bold text-center  flex-1/2 ">
           <motion.div
             initial={{ opacity: 0, x: -48 }}
             animate={is_head_inview ? { opacity: 1, x: 0 } : {}}
@@ -40,7 +40,10 @@ const Works = () => {
         <div className="font-bold">(Works)</div>
       </div>
 
-      <div className="grid grid-cols-2 gap-14 p-14" ref={ref}>
+      <div
+        className="grid lg:grid-cols-2 max-lg:grid-cols-1 gap-14 p-14"
+        ref={ref}
+      >
         {works.map((work, index) => (
           <motion.div
             key={index}
@@ -59,7 +62,9 @@ const Works = () => {
               />
             </a>
             <div className="flex justify-between px-2 pt-1.5">
-              <div className="text-2xl font-bold">{work.title}</div>
+              <div className="text-2xl font-bold whitespace-nowrap">
+                {work.title}
+              </div>
 
               <div className="flex items-center gap-2 rounded-full px-2 py-1 text-[28px] text-gray-600">
                 {work.skills.map((skill, index) => (
@@ -101,7 +106,7 @@ const Works = () => {
               <div className="items-center text-5xl font-bold">
                 Skill-Building Projects
               </div>
-              <div className="grid grid-cols-3 gap-14 p-14">
+              <div className="grid xl:grid-cols-3 md:grid-cols-2 max-md:grid-cols-1 gap-14 p-14">
                 {mini_project.map((item, index) => (
                   <motion.div
                     key={index}

@@ -113,7 +113,7 @@ export const works = [
     link: "https://parinyaporn03.github.io/ogs-news/",
   },
   {
-    title: "Vocabulary Game",
+    title: "Vocabulary",
     bg: vocab,
     skills: [
       {

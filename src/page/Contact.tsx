@@ -68,10 +68,11 @@ const Contact = () => {
   ) => {
     console.log("Failed:", errorInfo);
   };
+
   return (
     <div className="p-9 ">
       <div
-        className="text-[70px] flex flex-col text-center font-light"
+        className="xl:text-[70px] lg:text-[60px] md:text-[45px] sm:text-[35px] max-sm:text-[25px] flex flex-col text-center font-light"
         ref={ref}
       >
         <motion.div
@@ -97,10 +98,11 @@ const Contact = () => {
       </div>
       <div className="flex justify-end font-bold py-4">(Contact)</div>
       <div className="flex justify-center">
-        {" "}
-        <div className="bg-[#EDEDED] w-3xl rounded-3xl px-20 py-14">
-          <div className="bg-white rounded-3xl px-20 py-14 flex flex-col items-center gap-8">
-            <div className="text-4xl font-bold">Contact Me</div>
+        <div className="bg-[#EDEDED] w-3xl rounded-3xl lg:px-20 md:px-16 sm:px-12 max-sm:p-4 lg:py-14 md:py-12 sm:py-10">
+          <div className="bg-white rounded-3xl lg:px-14 md:px-12 sm:px-8 max-sm:p-6 xl:py-14 lg:py-10 md:py-8 sm:py-6 flex flex-col items-center gap-8">
+            <div className="xl:text-4xl md:text-3xl sm:text-2xl max-sm:text-xl font-bold">
+              Contact Me
+            </div>
             <ConfigProvider
               theme={{
                 components: {
