@@ -10,7 +10,8 @@ import vocab from "../assets/works/vocab.png";
 import weather from "../assets/weather.png";
 import card from "../assets/card.png";
 import form from "../assets/form.png";
-import todolist from "../assets/todolist.png";
+import todolistvue from "../assets/todolist-vue.png";
+import picturematching from "../assets/picturematching.png";
 import { AiFillApi } from "react-icons/ai";
 
 export const works = [
@@ -42,7 +43,7 @@ export const works = [
       { iconName: "RESTfulAPI", element: <AiFillApi /> },
     ],
 
-    link: "",
+    link: "https://parinyaporn03.github.io/recipes/",
   },
   {
     title: "User List",
@@ -146,26 +147,44 @@ export const works = [
 
 export const mini_project = [
   {
+    title: "Picture Matching",
+    bg: picturematching,
+    skills: [
+      "Created website layouts using Tailwind CSS.",
+      "Created websites using Vue 3.",
+    ],
+    link: "https://parinyaporn03.github.io/picture-matching/",
+  },
+  {
+    title: "Todo List",
+    bg: todolistvue,
+    skills: [
+      "Practiced using Vue 3.",
+      "Handled data passing through props in Vue.",
+    ],
+    link: "https://parinyaporn03.github.io/todolist-vue/",
+  },
+  {
     title: "Landing Page",
     bg: css,
     skills: [
-      "Create website layouts using HTML & CSS",
-      "Using Flexbox and Grid",
+      "Created website layouts using HTML & CSS",
+      "Used Flexbox and Grid",
     ],
     link: "https://parinyaporn03.github.io/landing-page/",
   },
   {
     title: "Weather Dashboard",
     bg: weather,
-    skills: ["Using UI libraries with React, such as Ant Design."],
+    skills: ["Used UI libraries with React, such as Ant Design."],
     link: "https://parinyaporn03.github.io/weather-dashboard/",
   },
   {
     title: "Christmas Card",
     bg: card,
     skills: [
-      "Create website layouts using Tailwind CSS.",
-      "Using Tailwind CSS for responsive design.",
+      "Created website layouts using Tailwind CSS.",
+      "Used Tailwind CSS for responsive design.",
     ],
     link: "https://parinyaporn03.github.io/christmas-card/",
   },
@@ -174,18 +193,9 @@ export const mini_project = [
     bg: form,
     skills: [
       "Used Redux for state management.",
-      "Using properties from Ant Design forms.",
+      "Used properties from Ant Design forms.",
     ],
     link: "https://parinyaporn03.github.io/register-form/",
-  },
-  {
-    title: "Todo List",
-    bg: todolist,
-    skills: [
-      "Practiced using React Hooks.",
-      "Handled data passing through props in React.",
-    ],
-    link: "https://parinyaporn03.github.io/todo-list/",
   },
 ];
 
