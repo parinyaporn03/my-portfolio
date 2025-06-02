@@ -14,7 +14,7 @@ const Works = () => {
 
   return (
     <div className=" p-9 mt-[50px]" ref={head_ref}>
-      <div className="flex items-center ">
+      <div className="flex items-center max-sm:flex-col max-sm:gap-5">
         <div className="max-sm:text-4xl sm:text-5xl md:text-6xl font-bold text-center  flex-1/2 ">
           <motion.div
             initial={{ opacity: 0, x: -48 }}
@@ -41,7 +41,7 @@ const Works = () => {
       </div>
 
       <div
-        className="grid lg:grid-cols-2 max-lg:grid-cols-1 gap-14 p-14"
+        className="grid lg:grid-cols-2 max-lg:grid-cols-1 gap-14 p-14 max-sm:p-5 max-sm:gap-5"
         ref={ref}
       >
         {works.map((work, index) => (
@@ -61,12 +61,12 @@ const Works = () => {
                 className="cursor-pointer rounded-3xl grayscale hover:grayscale-0 ring-1 hover:shadow-xl/20 hover:scale-105 transition-all duration-300"
               />
             </a>
-            <div className="flex justify-between px-2 pt-1.5">
+            <div className="flex max-sm:flex-col max-sm:items-center justify-between px-2 pt-1.5">
               <div className="text-2xl font-bold whitespace-nowrap">
                 {work.title}
               </div>
 
-              <div className="flex items-center gap-2 rounded-full px-2 py-1 text-[28px] text-gray-600">
+              <div className="flex items-center gap-2 rounded-full px-2 py-1 text-[28px] text-gray-600 ">
                 {work.skills.map((skill, index) => (
                   <Tooltip
                     title={`${skill.iconName}`}
@@ -103,10 +103,10 @@ const Works = () => {
               exit={{ opacity: 0, y: -8 }}
               className="flex flex-col items-center gap-4 mt-12 "
             >
-              <div className="items-center text-5xl font-bold">
+              <div className="items-center text-5xl font-bold max-sm:text-4xl max-sm:text-center">
                 Skill-Building Projects
               </div>
-              <div className="grid xl:grid-cols-3 md:grid-cols-2 max-md:grid-cols-1 gap-14 p-14">
+              <div className="grid xl:grid-cols-3 md:grid-cols-2 max-md:grid-cols-1 gap-14 p-14 max-sm:p-5 max-sm:gap-5">
                 {mini_project.map((item, index) => (
                   <motion.div
                     key={index}
