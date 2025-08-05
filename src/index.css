@@ -1,1 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Geo&family=Molengo&family=Nata+Sans:wght@100..900&family=Rubik+Pixels&family=Rubik+Puddles&display=swap");
+
 @import "tailwindcss";
+@theme {
+  --font-domain-regular: "Domine", serif;
+  --font-nata: "Nata Sans", sans-serif;
+}

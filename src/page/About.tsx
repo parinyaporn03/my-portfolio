@@ -15,10 +15,10 @@ const About = () => {
     <div className="pt-10 p-9">
       <div
         ref={head_ref}
-        className="flex justify-between items-center font-bold"
+        className="font-domain-regular flex justify-between items-center font-bold"
       >
         <motion.div
-          className="xl:text-5xl lg:text-4xl md:text-3xl max-md:text-2xl"
+          className=" xl:text-5xl lg:text-4xl md:text-3xl max-md:text-2xl"
           initial={{ opacity: 0, x: -48 }}
           animate={is_head_inView ? { opacity: 1, x: 0 } : {}}
           transition={{
@@ -31,7 +31,7 @@ const About = () => {
         <div>(About)</div>
       </div>
 
-      <div className="mt-[30px] text-xl">
+      <div className="font-nata mt-[30px] text-xl">
         I am a frontend developer who graduated from the College of Computing at
         Khon Kaen University. I am passionate about designing and developing
         modern websites, believing that great design should come with an
@@ -46,9 +46,9 @@ const About = () => {
           ref={card_ref}
           initial={{ scale: 0 }}
           animate={is_card_inView ? { scale: 1 } : {}}
-          className="rounded-3xl border-2 border-solid border-black p-8 px-10 mt-[35px]"
+          className="bg-white rounded-3xl border-2 border-solid border-black p-8 px-10 mt-[35px] "
         >
-          <div className="font-black xl:text-3xl lg:text-2xl md:text-xl max-md:text-lg rounded-full border-2 border-solid border-black p-2 w-fit px-4">
+          <div className="font-domain-regular xl:text-3xl lg:text-2xl md:text-xl max-md:text-lg rounded-full border-2 border-solid border-black p-2 w-fit px-4">
             My Experience
           </div>
           <div className="mt-4">
@@ -79,11 +79,11 @@ const About = () => {
         </motion.div>
 
         <div className="mt-[30px] flex flex-col items-center gap-6 w-full overflow-hidden">
-          <div className="text-3xl font-bold">Skills</div>
+          <div className="text-3xl font-bold font-domain-regular">Skills</div>
 
           <div
             ref={skill_ref}
-            className="max-md:overflow-auto w-full max-w-fit bg-[#D9D9D9] rounded-full px-4 p-2 flex items-center gap-4 text-5xl"
+            className="bg-slate-200 inset-shadow-sm max-md:overflow-auto w-full max-w-fit rounded-full px-4 p-2 flex items-center gap-4 text-5xl"
           >
             {skills.map((item, index) => (
               <motion.div

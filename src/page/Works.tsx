@@ -14,8 +14,8 @@ const Works = () => {
 
   return (
     <div className=" p-9 mt-[50px]" ref={head_ref}>
-      <div className="flex items-center max-sm:flex-col max-sm:gap-5">
-        <div className="max-sm:text-4xl sm:text-5xl md:text-6xl font-bold text-center  flex-1/2 ">
+      <div className="font-domain-regular flex items-center max-sm:flex-col max-sm:gap-5">
+        <div className=" max-sm:text-4xl sm:text-5xl md:text-6xl font-bold text-center  flex-1/2 ">
           <motion.div
             initial={{ opacity: 0, x: -48 }}
             animate={is_head_inview ? { opacity: 1, x: 0 } : {}}
@@ -58,11 +58,11 @@ const Works = () => {
             <a href={work.link} target="_blank">
               <img
                 src={`${work.bg}`}
-                className="cursor-pointer rounded-3xl grayscale hover:grayscale-0 ring-1 hover:shadow-xl/20 hover:scale-105 transition-all duration-300"
+                className="cursor-pointer rounded-3xl ring-1 hover:shadow-xl/20 hover:scale-105 transition-all duration-300"
               />
             </a>
             <div className="flex max-sm:flex-col max-sm:items-center justify-between px-2 pt-1.5">
-              <div className="text-2xl font-bold whitespace-nowrap">
+              <div className="font-domain-regular text-2xl font-bold whitespace-nowrap">
                 {work.title}
               </div>
 
@@ -86,7 +86,7 @@ const Works = () => {
 
       <div className="flex justify-center">
         <div
-          className="rounded-xl border-solid border-2 py-2 px-4 text-lg cursor-pointer hover:bg-slate-200 "
+          className="font-nata rounded-xl border-solid border-2 py-2 px-4 text-lg cursor-pointer hover:bg-slate-200 "
           onClick={() => setIsShow(!is_show)}
         >
           {is_show === true ? "Close" : "Show More"}
@@ -103,7 +103,7 @@ const Works = () => {
               exit={{ opacity: 0, y: -8 }}
               className="flex flex-col items-center gap-4 mt-12 "
             >
-              <div className="items-center text-5xl font-bold max-sm:text-4xl max-sm:text-center">
+              <div className="font-domain-regular items-center text-5xl font-bold max-sm:text-4xl max-sm:text-center">
                 Skill-Building Projects
               </div>
               <div className="grid xl:grid-cols-3 md:grid-cols-2 max-md:grid-cols-1 gap-14 p-14 max-sm:p-5 max-sm:gap-5">
@@ -118,7 +118,7 @@ const Works = () => {
                     }}
                   >
                     <a href={item.link} target="_blank">
-                      <div className="[&>.overlay]:hover:opacity-0 cursor-pointer grayscale relative border-2 rounded-3xl overflow-hidden hover:shadow-xl/20 hover:scale-105 hover:grayscale-0 transition-all duration-300">
+                      <div className="[&>.overlay]:hover:opacity-0 cursor-pointer  relative border-2 rounded-3xl overflow-hidden hover:shadow-xl/20 hover:scale-105 hover:grayscale-0 transition-all duration-300">
                         <img src={`${item.bg}`} />
                         <div className="overlay transition-all duration-300 absolute text-white uppercase font-thin top-0 left-0 size-full flex justify-center items-center bg-black/70 ">
                           {item.title}
@@ -129,7 +129,9 @@ const Works = () => {
                     <div className="flex justify-center pt-5">
                       <div>
                         {item.skills.map((skill, index) => (
-                          <li key={index}>{skill}</li>
+                          <li key={index} className="font-nata">
+                            {skill}
+                          </li>
                         ))}
                       </div>
                     </div>

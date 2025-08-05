@@ -72,7 +72,7 @@ const Contact = () => {
   return (
     <div className="p-9 ">
       <div
-        className="xl:text-[70px] lg:text-[60px] md:text-[45px] sm:text-[35px] max-sm:text-[25px] flex flex-col text-center font-light"
+        className="font-domain-regular xl:text-[70px] lg:text-[60px] md:text-[45px] sm:text-[35px] max-sm:text-[25px] flex flex-col text-center font-light"
         ref={ref}
       >
         <motion.div
@@ -97,10 +97,12 @@ const Contact = () => {
         </motion.div>
       </div>
       <div className="flex justify-end font-bold py-4">(Contact)</div>
+
+      {/* box */}
       <div className="flex justify-center">
-        <div className="bg-[#EDEDED] w-3xl rounded-3xl lg:px-20 md:px-16 sm:px-12 max-sm:p-4 lg:py-14 md:py-12 sm:py-10">
+        <div className="inset-shadow-sm bg-slate-200 w-3xl rounded-3xl lg:px-20 md:px-16 sm:px-12 max-sm:p-4 lg:py-14 md:py-12 sm:py-10">
           <div className="bg-white rounded-3xl lg:px-14 md:px-12 sm:px-8 max-sm:p-6 xl:py-14 lg:py-10 md:py-8 sm:py-6 flex flex-col items-center gap-8">
-            <div className="xl:text-4xl md:text-3xl sm:text-2xl max-sm:text-xl font-bold">
+            <div className="font-domain-regular xl:text-4xl md:text-3xl sm:text-2xl max-sm:text-xl font-bold">
               Contact Me
             </div>
             <ConfigProvider
@@ -115,7 +117,7 @@ const Contact = () => {
               }}
             >
               <Form
-                className="w-full "
+                className="w-full !font-nata"
                 name="basic"
                 initialValues={{ remember: true }}
                 onFinish={onFinish}
@@ -159,7 +161,11 @@ const Contact = () => {
                 </Form.Item>
                 {contextHolder}
                 <div className="flex justify-center">
-                  <Button loading={is_loading} htmlType="submit">
+                  <Button
+                    loading={is_loading}
+                    htmlType="submit"
+                    className="!font-nata"
+                  >
                     Submit
                   </Button>
                 </div>
@@ -172,7 +178,7 @@ const Contact = () => {
                   key={index}
                   placement="bottom"
                   title={item.name}
-                  className="hover:text-black cursor-pointer"
+                  className=" hover:text-black cursor-pointer"
                 >
                   <a
                     href={index === 0 ? `mailto:${item.link}` : item.link}
