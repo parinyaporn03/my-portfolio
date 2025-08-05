@@ -33,7 +33,7 @@ const Home = () => {
                 ease: [0, 0, 0, 1],
               }}
             >
-              <div className="flex flex-col gap-7 xl:items-start max-xl:items-center max-xl:mt-20 xl:mt-0">
+              <div className="flex flex-col gap-7 xl:items-start max-xl:items-center  xl:mt-0">
                 <div className="font-nata whitespace-nowrap flex max-sm:flex-col items-center sm:text-4xl max-sm:text-2xl gap-4 ">
                   <div>Hi, I'm Bam</div>
                   <div className="h-1 w-12 bg-black max-sm:w-full"></div>
